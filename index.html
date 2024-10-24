@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>ToDo App</h1>
+    <form id="todo-form" class="todo-form">
+      <input type="text" id="task-input" class="task-input" placeholder="Indtast en opgave" />
+      <input type="number" id="quantity-input" class="quantity-input" placeholder="Antal" min="1" />
+      <button type="submit" class="add-btn">Tilføj opgave</button>
+    </form>
+    <p class="error-message">Du skal indtaste en opgave før du kan tilføje den.</p>
+
+    <h2>Opgaver</h2>
+    <ul id="todo-list" class="todo-list"></ul>
+
+    <h2>Færdige opgaver</h2>
+    <ul id="done-list" class="done-list"></ul>
+
+    <!-- Skabelon til opgaver -->
+    <template id="task-template">
+      <li class="task-item">
+        <span class="task-text"></span>
+        <button class="done-btn">Færdig</button>
+        <button class="undo-btn">Fortryd</button>
+        <button class="delete-btn">Slet</button>
+      </li>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
